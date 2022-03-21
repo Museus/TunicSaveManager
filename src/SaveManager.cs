@@ -371,7 +371,7 @@ namespace DeathsDoorSaveManager {
         /// </summary>
         /// <param name="folderPath">The path to open File Explorer on</param>
         private string GetMostRecentSave() {
-            var regex_search = new Regex(@"\[TitleScreen\] most recent save \((.*.tunic)\): exists!");
+            var regex_search = new Regex(@"\[FileManagementGUI\] Loading file `(.*.tunic)`");
             string most_recent_save = "";
 
             if (!Directory.Exists(saveFolder))
