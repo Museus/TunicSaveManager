@@ -1,4 +1,4 @@
-﻿namespace DeathsDoorSaveManager {
+﻿namespace TunicSaveManager {
     partial class SaveManager {
         /// <summary>
         ///  Required designer variable.
