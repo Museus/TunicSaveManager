@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/), and will follow [Semantic Versioning](https://semver.org/).
 
+## [1.1.3] - Apr 5 2022
+
+### Changed
+ - Only check top level directory for logical saves
+
+### Bug fixes
+ - Snapshots could not be created from any save file not named "new\_snapshot" [#5](https://github.com/Museus/TunicSaveManager/issues/5)
+
+#
 ## [1.1.2] - Apr 5 2022
 
 ### Bug fixes
