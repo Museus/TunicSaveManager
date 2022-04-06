@@ -6,13 +6,13 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ApplicationIcon>hsm.ico</ApplicationIcon>
     <NoWin32Manifest>true</NoWin32Manifest>
-    <Version>1.1.1</Version>
+    <Version>1.1.2</Version>
     <Authors>Museus</Authors>
     <Description>Create and load snapshots of your TUNIC runs.</Description>
-    <Copyright>2021</Copyright>
-    <PackageProjectUrl>http://github.com/Museus/BaldoSaveManager</PackageProjectUrl>
+    <Copyright>2022</Copyright>
+    <PackageProjectUrl>https://github.com/Museus/TunicSaveManager</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageReleaseNotes>Fixed incorrect parsing of "last loaded save"</PackageReleaseNotes>
+    <PackageReleaseNotes>Update to work with new logical save system</PackageReleaseNotes>
     <AssemblyName>TunicSaveManager</AssemblyName>
     <RootNamespace>TunicSaveManager</RootNamespace>
     <RepositoryUrl>https://github.com/Museus/TunicSaveManager</RepositoryUrl>
