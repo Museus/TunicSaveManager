@@ -7,7 +7,7 @@ using System.Linq;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 
-namespace DeathsDoorSaveManager {
+namespace TunicSaveManager {
     public partial class SaveManager : Form {
         private string saveFolder, snapshotFolder;
         private readonly string runFileFmt, snapshotNameFmt;
