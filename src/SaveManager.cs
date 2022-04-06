@@ -149,6 +149,7 @@ namespace DeathsDoorSaveManager {
                 }
 
                 File.Delete(paths["run"]);
+                DeleteLogicalSaves(snapshotName);
 
                 File.Copy(paths["snapshot"], paths["run"], true);
             }
@@ -391,6 +392,22 @@ namespace DeathsDoorSaveManager {
             }
 
             return Path.Combine(saveFolder, most_recent_save);
+        }
+
+        /// <summary>
+        /// DeleteLogicalSaves clears any logical saves starting with the target_save name.
+        /// </summary>
+        /// <param name="target_save">The save file to clear logical saves for</param>
+        private void DeleteLogicalSaves(string target_save) {
+            if (!Directory.Exists(saveFolder))
+                return;
+
+            string target_file_no_extension = System.IO.Path.GetFileNameWithoutExtension(target_save); // Remove .tunic from end
+
+            string[] logical_saves = Directory.GetFiles(saveFolder, target_file_no_extension + "~*.tunic", SearchOption.AllDirectories);
+            foreach (string logical_save in logical_saves) {
+                File.Delete(logical_save);
+            }
         }
     }
 }
