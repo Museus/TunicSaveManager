@@ -402,9 +402,9 @@ namespace TunicSaveManager {
             if (!Directory.Exists(saveFolder))
                 return;
 
-            string target_file_no_extension = System.IO.Path.GetFileNameWithoutExtension(target_save); // Remove .tunic from end
+            string target_file_no_extension = Path.GetFileNameWithoutExtension(target_save); // Remove .tunic from end
 
-            string[] logical_saves = Directory.GetFiles(saveFolder, target_file_no_extension + "~*.tunic", SearchOption.AllDirectories);
+            string[] logical_saves = Directory.GetFiles(saveFolder, target_file_no_extension + "~*.tunic", SearchOption.TopDirectoryOnly);
             foreach (string logical_save in logical_saves) {
                 File.Delete(logical_save);
             }
