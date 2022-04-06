@@ -369,9 +369,8 @@ namespace DeathsDoorSaveManager {
         /// <summary>
         /// GetMostRecentSave reads the Player Log to find the most recently loaded save.
         /// </summary>
-        /// <param name="folderPath">The path to open File Explorer on</param>
         private string GetMostRecentSave() {
-            var regex_search = new Regex(@"\[FileManagementGUI\] Loading file `(.*.tunic)`");
+            var regex_search = new Regex(@"\[SaveFile\] Saving logical savefile `new_snapshot` as `.*\\Secret Legend\\SAVES\\(.*.tunic)` to disk");
             string most_recent_save = "";
 
             if (!Directory.Exists(saveFolder))
