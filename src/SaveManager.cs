@@ -95,10 +95,11 @@ namespace TunicSaveManager {
             if (!FoldersInitialized()) return;
 
             Dictionary<string, string> paths = GetPaths(snapshotName);
+            string current_save = GetMostRecentSave();
 
             if (File.Exists(paths["snapshot"])) {
                 // If the snapshot is the same, don't bother replacing it.
-                if (FileCompare(paths["snapshot"], paths["run"])) return;
+                if (FileCompare(paths["snapshot"], current_save)) return;
 
                 DialogResult overwriteSnapshot = MessageBox.Show(
                     String.Format("A snapshot named {0} already exists. Would you like to overwrite this snapshot?", snapshotName),
@@ -109,7 +110,6 @@ namespace TunicSaveManager {
                 if (overwriteSnapshot != DialogResult.Yes) return;
             }
 
-            string current_save = GetMostRecentSave();
             File.Copy(current_save, paths["snapshot"], true);
 
             ReloadSnapshots();
