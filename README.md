@@ -14,6 +14,10 @@ direct installation on your PC. However, it does require the .NET Framework.
 When you first try to run the SaveManager, your PC wil prompt you to install
 .NET, if necessary.
 
+If the prompt appears, but does not lead you anywhere, you can get the 
+.NET 3.1 Runtime manually 
+[here](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-3.1.32-windows-x64-installer).
+
 # Usage
 
 The Save Manger is a single window, with inputs for:
