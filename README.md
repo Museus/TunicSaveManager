@@ -11,7 +11,7 @@ snapshots at any time.
 
 The TunicSaveManager is a portable executable, which means it does not require
 direct installation on your PC. However, it does require the .NET Framework.
-When you first try to run the SaveManager, your PC wil prompt you to install
+When you first try to run the SaveManager, your PC will prompt you to install
 .NET, if necessary.
 
 If the prompt appears, but does not lead you anywhere, you can get the 
